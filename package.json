@@ -1,0 +1,23 @@
+{
+  "name": "kindle-flashcards",
+  "version": "1.0.0",
+  "description": "Create automatic flashcards from your kindle vocabulary builder and export into Anki.",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "gh-pages -d .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavostz/kindle-flashcards.git"
+  },
+  "author": "gustavostz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gustavostz/kindle-flashcards/issues"
+  },
+  "homepage": "https://github.com/gustavostz/kindle-flashcards",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}
