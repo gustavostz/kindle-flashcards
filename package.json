@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/gustavostz/kindle-flashcards/issues"
   },
-  "homepage": "https://github.com/gustavostz/kindle-flashcards",
+  "homepage": "https://kindle-flashcards.gustavostz.com",
   "devDependencies": {
     "gh-pages": "^6.1.1"
   }
