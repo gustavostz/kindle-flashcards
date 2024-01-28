@@ -1,0 +1,11 @@
+{
+  "name": "your-project-root",
+  "version": "1.0.0",
+  "description": "This is the root package.json for my Glitch project.",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "postinstall": "cd backend && npm install"
+  },
+  "dependencies": {
+  }
+}
