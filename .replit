@@ -1,2 +1,0 @@
-language = "nodejs"
-run = "cd backend && npm install && npm start"
