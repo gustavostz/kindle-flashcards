@@ -67,17 +67,27 @@ The purpose of this system is to allow users to integrate their Kindle vocabular
     - If the user wants to import the flashcards to Anki or other similar platform, do the Step 3 after each iteration of flashcards.
 
 ## Step 3: Importing Flashcards into Anki
+**Goal**: Prepare the flashcards to be ready for import into Anki.
 
-**Goal**: Prepare the flashcards to be ready to import on Anki.
+1. **Deck Template Retrieval**:
+   - The user may provide a deck file format in text or send a deckTemplate Id (e.g., 0001, 0040, 1234) or the id with full name (e.g., 0001-Word-Definition-Context-template, 0020-template-gus, 1234-specific-template).
+   - Retrieve the deckTemplate using the kindle-flashcards.gustavostz.com API. Call `getDeckTemplateList` to get the list of deckTemplate and check the full name of the deckTemplate ID sent by the user.
 
-1. **Import to a Flashcard App**:
-    - The user can send you his deck file format in text. Or send a deckTemplate Id (for example 0001, 0040, 1234, etc) or the id with full name (for example 0001-Word-Definition-Context-template, 0020-template-gus, 1234-specific-template, etc). If this happens, do this:
-        - If the user sends the deckTemplate Id, then you should call the kindle-flashcards.gustavostz.com API with the getDeckTemplateList operation to get the list of deckTemplate and check the full name of the deckTemplate ID sent by the user and do the next step.
-            - Now you should have the full name with the id of the deckTemplate, then you should call the kindle-flashcards.gustavostz.com API with the getDeckTemplate operation to get the deckTemplate, the `name` parameter should be the full name of the instruction with the id (for example 0001-Word-Definition-Context-template, 0020-template-gus, 1234-specific-template, etc) and it will return the deckTemplate in markdown format.
-    - Create the flashcards following the instructions and the deckTemplate to structure in the specific file format.
-    - The system should the specified file by calling the api.kindle-flashcards.gustavostz.com API with the appendToFile operation to append the new flashcards to the file using a long and very random alphanumeric string for the fileName with the specified extension from the deckTemplate.The sytem should do this until you finish all the words or the user ask to stop.
-    - Then you should give the user a link to download the file with the flashcards using this markdown (the link shouldn't be in markdown): https://api.kindle-flashcards.gustavostz.com/download/{fileName} 
-      **Note**: The `fileName` parameter should be the long and very random alphanumeric string used to create the file containing the flashcards.
+2. **Flashcard Creation**:
+   - Create the flashcards following the instructions and the deckTemplate to structure the file format accordingly.
+
+3. **Filename Generation**:
+   - **Important**: The system must generate a **long and very random alphanumeric string** for the filename. This is crucial to ensure uniqueness and prevent any potential data conflicts.
+
+**🔔 Note on Filename Uniqueness**:
+> Make sure to generate a **unique and random alphanumeric string** for each file. This prevents overwriting existing files.
+
+4. **File Appending and Download Link**:
+   - Use the `appendToFile` operation from the api.kindle-flashcards.gustavostz.com API to append the new flashcards to the file. Remember, the filename must be the **long and very random alphanumeric string** you generated.
+   - After completing the flashcard creation, provide the user with a download link. Format the link as follows: `https://api.kindle-flashcards.gustavostz.com/download/{fileName}`
+
+**Note**: The `fileName` parameter should be the long and very random alphanumeric string used to create the file containing the flashcards. 
+      
 
 ## Notes and Considerations:
 
