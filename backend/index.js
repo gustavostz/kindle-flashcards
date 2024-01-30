@@ -12,7 +12,7 @@ app.listen(port, () => {
 app.post('/append/:fileName', (req, res) => {
     const { text } = req.body;
     const { fileName } = req.params;
-    const filePath = `./${fileName}.txt`; // File path based on parameter
+    const filePath = `./${fileName}`; // File path based on parameter
 
     // Append text to the file, creating the file if it doesn't exist
     fs.appendFile(filePath, text + '\n', (err) => {
@@ -26,7 +26,7 @@ app.post('/append/:fileName', (req, res) => {
 
 app.get('/download/:fileName', (req, res) => {
     const { fileName } = req.params; // Get the file name from route parameters
-    const filePath = `./${fileName}.txt`; // Your file path based on route parameter
+    const filePath = `./${fileName}`; // Your file path based on route parameter
     res.download(filePath, (err) => {
         if (err) {
             console.error('Failed to download file:', err);
