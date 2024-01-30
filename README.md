@@ -5,7 +5,8 @@ Create automatic flashcards from your Kindle vocabulary builder using AI and exp
 ## Introduction
 This repository presents a system that integrates with GPT to generate personalized Anki flashcards. Click here to access the [Kindle Flashcards ChatGPT](https://chat.openai.com/g/g-9wKfpW66j-kindle-flashcards).
 
-⚠️ **Note:*** Currently the project is only integrate with ChatGPT, so it needs the ChatGPT plus to access it. ⚠️
+> [!NOTE]  
+> ⚠️ Currently the project is only integrate with ChatGPT, so it needs the ChatGPT plus to access it. ⚠️
 
 The system extracts words and their contexts from your Kindle's `vocab.db` file and uses a GPT to create personalized flashcards.
 
@@ -39,6 +40,12 @@ The system extracts words and their contexts from your Kindle's `vocab.db` file 
 
 ## Contribution
 Feel free to contribute to this repository by submitting pull requests or suggesting new features or improvements.
+
+## 🎥 Video Tutorial
+
+Check out the video below to see an interaction with the system:
+
+[![Kindle Flashcards Video Tutorial](https://i.ytimg.com/vi/rKEa5SfOOuU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCsXD633-wVLr_wS4ESf2sdPLzKuQ)](https://youtu.be/rKEa5SfOOuU)
 
 ## License
 This project is open-sourced under the [MIT License](LICENSE).
