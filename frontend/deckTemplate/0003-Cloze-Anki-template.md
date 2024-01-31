@@ -1,3 +1,4 @@
+{% raw %}
 # Flashcards in the ANKI Cloze Format to Import
 
 ## Format Definition
@@ -24,3 +25,4 @@ Through the barred window in my cell door, I watched them {{c1::skulk}} down the
 ```
 
 This format is specifically designed for the ANKI Cloze format, facilitating the creation of cloze deletion cards where the learner is prompted to recall the missing information (the stem) within a given context. The `cloze-context` provides the sentence or phrase with the missing word, promoting active recall and engagement with the content.
+{% endraw %}
