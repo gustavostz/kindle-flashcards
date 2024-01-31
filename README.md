@@ -6,7 +6,7 @@ Create automatic flashcards from your Kindle vocabulary builder using AI and exp
 - [Introduction](#introduction)
 - [Features](#features)
 - [Workflow Overview](#workflow-overview)
-- [Detailed Steps](#detailed-steps)
+- [Detailed Steps](#detailed-steps-)
 - [Instructions Categories](#instructions-categories) 
   - [Direct Explanations](#direct-explanations)
     - [English](#english-)
@@ -47,20 +47,91 @@ Words and contexts are extracted from your Kindle's `vocab.db` file, allowing GP
 4. **Flashcard Generation**: Craft personalized flashcards leveraging user instructions and extracted data.
 5. **Flashcard Export**: Prepare flashcards for Anki import or receive them directly through chat.
 
-## Detailed Steps
+## Detailed Steps 👣
+
+> [!NOTE]  
+> If you encounter any difficulties during these steps, watch the [Video Tutorial](#video-tutorial-) which will show you how to do it.
+
+### Step 0: Kindle Connection
+- Connect your Kindle to your desktop and search for the `vocab.db` file.
+
 ### Step 1: Extraction of Information from `vocab.db`
-- Provide guidance for data extraction from Kindle.
-- Execute SQL queries for detailed book information, words, and contexts.
+- Drag the vocab.db file to the [Kindle Flashcards GPT](https://chat.openai.com/g/g-9wKfpW66j-kindle-flashcards) chat and send it.
 
-### Step 2: Getting Instructions and Generating Flashcards
-- Input user instructions or reference IDs.
-- Access APIs for complete instructions or deck templates.
-- Generate targeted feedback or flashcards based on user-guided instructions.
+### Step 2: Selecting a Book
+- The GPT will ask you to select a book from the list of books that you have on your Kindle.
+- Select the book that you want to generate flashcards from.
 
-### Step 3: Importing Flashcards into Anki
-- Support for Anki direct import or other platforms.
-- API integration for appending flashcards to specific formats.
-- Offer download links for generated flashcard files.
+### Step 3: Selecting the Instructions
+- The GPT will show you a list of words on their contexts, and will ask you about instructions on how to generate the flashcards.
+
+#### Option 1: Send Instructions through Chat
+- You can send instructions directly through the chat guiding him what he should do with the words and contexts.
+
+#### Option 2 (Recommended): Send Instructions ID through Chat
+- You can send an instruction ID (for example, 0001) or the instruction ID with the full name (for example, 0001-Direct-and-analogy-explanations-in-English), and the GPT will retrieve the instruction from the Kindle Flashcards GPT API and proceed accordingly.
+- The GPT will ask your permission to get the instruction from the API, just allow it:
+
+![Kindle Flashcards asking permission to use the API](ReadMe-assets/permission-api-kindle-flashcards.png)
+
+##### Common questions in this part:
+
+1. **How do I know which instruction ID to use?**
+    - You can check the [Instructions Categories](#instructions-categories) to see the list of instructions, what they do, and their IDs.
+2. **How do I add my own instruction?**
+    - You can open a pull request in this repository with your instruction, just follow the [contribution guidelines](CONTRIBUTING.md).
+    - After accepting your pull request, your instruction will be automatically available for everyone to use.
+
+
+### Step 4: Importing Flashcards into Anki (Selecting DeckTemplate)
+
+#### Option 1: Generate flashcards through Chat
+- If you only desired to generate the flashcards through the chat, you already accomplished your goal.
+- Now ChatGPT is accessing your vocab.db file on each iteration and plotting new flashcards based on the instructions that you sent.
+- You can continue asking him to generate more flashcards with new words and context from your `vocab.db` file.
+
+#### Option 2: Generate flashcards ready to import into Anki
+- After selecting the instructions, the GPT will generate for you the flashcards using the instructions that you selected and prompt on the chat. But probably your main intention here is to import the flashcards into Anki, right?
+- So, even if it's not prompted, you can send 'DeckTemplate: {ID}', replacing {ID} with the DeckTemplate ID you wish to use for import into ANKI. You can check all the Deck Templates available here: [Deck Templates Categories](#deck-templates-categories).
+- Now, he's putting your flashcards in the format that you want to import into Anki.
+- After this, there are several options that he can ask you. But it's important to be direct and clear that you want him to import the flashcards into Anki and for this you want to download the file through the Kindle Flashcards API:
+
+![Asking in a direct way to use the Kindle Flashcards API](ReadMe-assets/being-specific-about-kindle-flashcards-API.png)
+
+- Now you have two options, ask him to add more words with its context and explanations to the flashcards or ask him to download the file through the Kindle Flashcards API.
+
+> [!NOTE]  
+> ChatGPT can be inconsistent at times, so it's always recommended to verify the file's accuracy before performing multiple iterations of adding more words.
+
+- If you want to add more words and context to the flashcards, simply instruct, 'Please add more words with their contexts and explanations from this vocab.db file,' and it will append more flashcards to the file within the Kindle Flashcards API.
+- If you want to download the file, you can ask the link for him. And if you're not being able to click on the link, you can get your link in this way: 
+```
+api.kindle-flashcards.gustavostz.com/download/{fileName}
+```
+
+![How to get the download link](ReadMe-assets/how-to-get-download-link.png)
+
+- Or you can simply ask him to give you the link in plain text:
+
+![How to get the link in plain text](ReadMe-assets/getting-download-link-in-plain-text.png)
+
+- And now you can just import this file into Anki:
+
+![How to import flashcards into ANKI Step By Step GIF](ReadMe-assets/How-to-import-flashcards-into-ANKI-Step-By-Step.gif)
+
+##### Common questions in this part:
+
+1. **What is a Deck Template?**
+    - A Deck Template specifies the format that ChatGPT should follow when generating flashcards. It ensures consistency and compatibility with your flashcard application. Explore the various Deck Templates available in our [Deck Templates Categories](#deck-templates-categories). 
+2. **Can I create my own Deck Template?**
+    - Absolutely! Similar to instructions, you can contribute your Deck Template by opening a pull request in this repository. Check the [contribution guidelines](CONTRIBUTING.md) for more details.
+3. **Why do I need to use the Kindle Flashcards API to download the file?**
+    - While it's not a 'necessity', we strongly recommend using the Kindle Flashcards API for file downloads. ChatGPT has a limited context window, which might lead to issues, especially with larger files. The API helps mitigate such risks and ensures a smoother experience. Here's an example of what can happen when dealing with large files directly through ChatGPT:
+    ![ChatGPT bugging with large files (example)](ReadMe-assets/chatgpt-bug-with-big-files.png)
+
+### Final Step: Warnings and Recommendations
+- **Recommendation**: The file generated by the Kindle Flashcards API is a temporary file, it will be deleted after some time. So, if you want to keep the file, you should download it and save it in your computer.
+- **Warning**: **DO NOT** use any personal information in the flashcards, because the file generated by the Kindle Flashcards API is public and anyone can access it.
 
 ## [Instructions](frontend/instructions) Categories
 
@@ -124,6 +195,11 @@ This project is proudly open-sourced under the [MIT License](LICENSE).
 Heartfelt thanks to all contributors and users for their invaluable support and feedback. Your contributions continuously enrich this project ❤️.
 
 ## FAQ 🤔
+
+<details>
+  <summary> What's the difference between Instructions and Deck Template?</summary>
+    Both are guidelines that the ChatGPT will use to generate the flashcards, but the Instructions will be used to form the explanation of the flashcards and the Deck Template will be used to format the flashcards to import into specific platforms like Anki.
+</details>
 
 <details>
   <summary>Can I use this project without ChatGPT Plus?</summary>
