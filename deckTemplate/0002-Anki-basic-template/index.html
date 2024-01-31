@@ -1,0 +1,16 @@
+<h1>Flashcards in the ANKI Basic Template Format to Import</h1>
+<h2>Format Definition</h2>
+<p>The format will be a TSV (Tab-Separated Values) file consisting of the following columns:</p>
+<ul>
+<li><code>stem-context-highlighted</code>: A combination of the stem of the word and the context in which the word was used. The word (stem) will be placed at the beginning, followed by the context formatted as HTML with the word highlighted in bold. The context is encapsulated within a <code>&lt;p class=&quot;context&quot;&gt;</code> HTML tag.</li>
+<li><code>flashcard-explanation</code>: The explanation or description that relates to the word in the context, intended for the flashcard content.</li>
+</ul>
+<p>The columns are separated by a tab character (<code>\t</code>) and the rows are separated by a new line character (<code>\n</code>). The file should be saved with the <code>.tsv</code> extension.</p>
+<h3>Format Example</h3>
+<pre><code class="language-tsv">{stem-context-highlighted}	{flashcard-explanation}
+</code></pre>
+<h3>Example with Data</h3>
+<pre><code>tantalizing&lt;p class=&quot;context&quot;&gt;Either one is &lt;b&gt;tantalizing&lt;/b&gt;, but together they are enough to drive you to madness. &lt;/p&gt;	Explanation1
+sewers&lt;p class=&quot;context&quot;&gt;They came through &lt;b&gt;sewers&lt;/b&gt;, wading through the filth and muck, heartbeats erratic and fearful. &lt;/p&gt;	Explanation two
+skulk&lt;p class=&quot;context&quot;&gt;Through the barred window in my cell door, I watched them &lt;b&gt;skulk&lt;/b&gt; down the brick-lined hallway with great caution. &lt;/p&gt;	Explanation 3
+</code></pre>
