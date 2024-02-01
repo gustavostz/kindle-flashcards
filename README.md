@@ -34,6 +34,8 @@ This repository is dedicated to integrating the capabilities of GPT for generati
 
 Words and contexts are extracted from your Kindle's `vocab.db` file, allowing GPT to create targeted, effective flashcards.
 
+If you find this project helpful, please consider giving it a ⭐️ on GitHub. Your support is greatly appreciated and it helps keep the project alive and evolving!
+
 ## Features
 - **Kindle Vocabulary Extraction**: Seamlessly pull words and contexts from your Kindle's `vocab.db`.
 - **GPT-Powered Flashcard Generation**: Utilize GPT's advanced capabilities for personalized flashcard creation.
@@ -166,7 +168,7 @@ api.kindle-flashcards.gustavostz.com/download/{fileName}
 
 - [0001 - Word + Definition + Context - TSV](frontend/deckTemplate/0001-Word-Definition-Context-template.md)
 
-## [Guidelines](frontend/deckTemplates) Categories
+## [Guidelines](frontend/deckTemplates) Categories (AI)
 
 ### ChatGPT
 
@@ -200,6 +202,14 @@ Heartfelt thanks to all contributors and users for their invaluable support and 
   <summary> What's the difference between Instructions and Deck Template?</summary>
     Both are guidelines that the ChatGPT will use to generate the flashcards, but the Instructions will be used to form the explanation of the flashcards and the Deck Template will be used to format the flashcards to import into specific platforms like Anki.
 </details>
+
+<details>
+  <summary>What is the purpose of the 'Guidelines' files in the AI folder?</summary>
+    <p>The 'Guidelines' files are essentially sets of instructions for GPT, detailing how it should behave at each step. They represent the specific configuration of GPT within ChatGPT for this project.</p>
+    <p>You are welcome to create your own set of guidelines and apply them to our GPT; it will follow to your instructions. This allows flexibility and customization in the way the GPT works for your specific needs.</p>
+    <p>If you think your own guideline adds any value, feel free to submit a pull request to include it in the repository. Outstanding contributions might even become the new default guideline for the Kindle Flashcards GPT, enhancing the project for all users!</p>
+</details>
+
 
 <details>
   <summary>Can I use this project without ChatGPT Plus?</summary>
