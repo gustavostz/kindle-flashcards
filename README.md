@@ -140,35 +140,35 @@ api.kindle-flashcards.gustavostz.com/download/{fileName}
 ### Direct Explanations:
 
 #### English 🍔
-- [0001 - Direct and analogy explanations](frontend/instructions/0001-Direct-and-analogy-explanations-in-English)
-- [0002 - Direct explanations](frontend/instructions/0002-Direct-explanations-in-English.md)
+- [0001 - Direct and analogy explanations](https://kindle-flashcards.gustavostz.com/instructions/0001-Direct-and-analogy-explanations-in-English)
+- [0002 - Direct explanations](https://kindle-flashcards.gustavostz.com/instructions/0002-Direct-explanations-in-English.md)
 
 #### Japanese 🍣
 
-- [0003 - Direct explanations](frontend/instructions/0003-Direct-explanations-in-Japanese.md)
+- [0003 - Direct explanations](https://kindle-flashcards.gustavostz.com/instructions/0003-Direct-explanations-in-Japanese.md)
 
 #### Spanish 💃
 
-- [0005 - Direct explanations](frontend/instructions/0005-Direct-explanations-in-Spanish.md)
+- [0005 - Direct explanations](https://kindle-flashcards.gustavostz.com/instructions/0005-Direct-explanations-in-Spanish.md)
 
 ### Funny Explanations:
 
 #### English 🍔
 
-- [0004 - Humorous explanations](frontend/instructions/0004-Humorous-Explanations-English.md)
+- [0004 - Humorous explanations](https://kindle-flashcards.gustavostz.com/instructions/0004-Humorous-Explanations-English.md)
 
-## [Deck Templates](frontend/deckTemplates) Categories
+## [Deck Templates](https://kindle-flashcards.gustavostz.com/deckTemplate) Categories
 
 ### ANKI Default Templates:
 
-- [0002 - Anki Basic TSV](frontend/deckTemplate/0002-Anki-basic-template.md)
-- [0003 - Cloze Anki TSV](frontend/deckTemplate/0003-Cloze-Anki-template.md)
+- [0002 - Anki Basic TSV](https://kindle-flashcards.gustavostz.com/deckTemplate/0002-Anki-basic-template.md)
+- [0003 - Cloze Anki TSV](https://kindle-flashcards.gustavostz.com/deckTemplate/0003-Cloze-Anki-template.md)
 
 ### ANKI Custom Templates:
 
-- [0001 - Word + Definition + Context - TSV](frontend/deckTemplate/0001-Word-Definition-Context-template.md)
+- [0001 - Word + Definition + Context - TSV](https://kindle-flashcards.gustavostz.com/deckTemplate/0001-Word-Definition-Context-template.md)
 
-## [Guidelines](frontend/deckTemplates) Categories (AI)
+## [Guidelines](./AI) Categories (AI)
 
 ### ChatGPT
 
